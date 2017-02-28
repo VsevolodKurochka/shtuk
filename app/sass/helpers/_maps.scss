@@ -34,12 +34,16 @@ $colors: (
 		base	: $color-main,
 		light : lighten($color-main, 15%)
 	),
+	main-second: (
+		base: $color-main-second,
+		light : lighten($color-main-second, 15%)
+	),
 	menu: (
 		base  : $color-responsive-menu,
 		light : lighten($color-responsive-menu, 5%)
 	),
 	dark: (
-		base 	: #333,
+		base 	: #333b3f,
 		black : #000,
 		light : #f3f3f3
 	),
@@ -60,13 +64,13 @@ $sizes: (
 	'vtitle-big': (
 		xs:   48px,
 		sm:   80px,
-		lg:   100px
+		lg:   90px
 	),
 	'vtitle': (
-		md:   60px
+		md:   48px
 	),
 	'vtitle-small': (
-		sm:   30px
+		sm:   24px
 	)
 );
 

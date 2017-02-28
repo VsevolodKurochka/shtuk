@@ -31,3 +31,14 @@
     letter-spacing: #{$i}px;
   }
 }
+.ls-10{
+  letter-spacing: 10px;
+}
+.color{
+  &-main{
+    color: setColor(main);
+    &-second{
+      color: setColor(main-second);
+    }
+  }
+}

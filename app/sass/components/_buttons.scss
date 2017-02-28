@@ -1,16 +1,16 @@
 .vbtn {
   min-width: 200px;
   max-width: 100%;
-  padding: 20px 25px;
+  padding: 19px;
   overflow: hidden;
   border: none;
-  border-radius: 3px;
+  border-radius: 0;
   z-index: z('default');
   font-size: 18px;
   @extend .relative;
   @extend .block-inline;
   @extend .text-dn;
-  @extend .bold;
+  @extend .bold !optional;
   @extend .transition;
   &:before{
     z-index: -1;
@@ -18,8 +18,7 @@
     @extend .transition;
   }
   @include resp-min(xs){
-    font-size: 18px;
-    padding: 30px;
+    font-size: 18px;    
   }
   &-effect{
     transform: translateZ(0);
@@ -107,9 +106,15 @@
     }
   }
   &-main{
-    background-color: setColor(main);
+    color: #fff;
+    background-color: #ff8c32;
+    box-shadow: 0 8px 10px rgba(244,75,0,.64);
+    background-image: linear-gradient(to top, rgba(252,100,56,.8), rgba(255,140,50,.8));
     &:before{
       background-color: lighten(setColor(main), 15%);
+    }
+    &:hover{
+      box-shadow: none;
     }
   }
   &-single{

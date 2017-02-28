@@ -1,6 +1,6 @@
 include ./mixins
 .vrow.flex-v-center
-	.vak-xs-8.vak-md-3
+	.vak-xs-8.vak-md-2
 		.vnav-logo
 			button(type="button" class="vnav-btn" data-menu=".vnav-wrap-fixed .vnav")
 				span.lines
@@ -10,16 +10,17 @@ include ./mixins
 				//span.text Menu
 			.block-inline
 				img(src="img/logo.png" alt="")
-	nav.vnav.vak-xs-12.vak-md-6
+	nav.vnav.vak-xs-12.vak-md-7.min-md-right
 		ul
-			+item("#sec1", "active") Главная
-			+item("#sec2") item_2
-			+item("#sec3") item_3
-	.vak-xs-4.vak-md-3
-		.vnav-text-toggle.text-right
+			+item("#sec1", "active") Преимущества машинной штукатурки
+			+item("#sec2") Отзывы
+			+item("#sec3") Выполненные работы
+	.vak-xs-4.vak-md-3.text-right
+		.vnav-text-toggle
 			span
 			span
 			span
-		.vnav-text.text-md-right
-			a.vnav-text-inner +38 (093) 961 33 54
-			a.vnav-text-inner.vnav-text-hidden +38 (093) 961 33 54
+		.vnav-text
+			a.vnav-text-inner 095 815 63 69
+			//a.vnav-text-inner.vnav-text-hidden 098 891 95 52
+			a.vnav-text-inner 098 891 95 52

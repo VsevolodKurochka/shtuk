@@ -1,0 +1,103 @@
+.big-man{
+	&-list{
+		margin-top: 30px;
+		color: #333b3f;
+	}
+	&-about{
+		margin-top: 30px;
+	}
+	// @include resp-min(sm){
+	// 	&-about{
+	// 		font-size: 24px;
+	// 	}
+	// }
+	@include resp-min(md){
+		&-center{
+			align-items: center;
+		}
+		&-list{
+			padding-left: 15px;
+			margin-top: 45px;
+		}
+	}
+	@include resp-min(lg){
+		&-about{
+			margin-top: 60px;
+		}
+		&-list{
+			margin-top: 90px;
+		}
+	}
+}
+.rule{
+	&-wrapper{
+		margin-top: 30px;
+		text-align: center;
+		color: setColor(dark);
+	}
+	img{
+		margin-bottom: 15px;
+	}
+	@include resp-min(sm){
+		&-wrapper{
+			margin-top: 50px;
+			justify-content: center;
+		}
+		img{
+			margin-bottom: 30px;
+		}
+	}
+}
+.what-today{
+	&-section{
+		padding-bottom: 0;
+		@include bg('../img/what-today.jpg', center center);
+	}
+	&-fluid{
+		margin-bottom: -45px;
+	}
+	@include resp-min(md){
+		&-list{
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 80px;
+			li{
+				margin-bottom: 60px;
+				flex-basis: 50%;
+				
+			}
+		}
+	}
+	@include resp-min(lg){
+		&-inner{
+			padding-left: 70px;
+			padding-right: 70px;
+		}
+		&-list{
+			li{
+				padding-right: 40px;
+				margin-bottom: 80px;
+			}
+		}
+	}
+}
+.fluid-block{
+	padding: 15px 25px;
+	text-align: center;
+	text-transform: uppercase;
+	color: setColor(white);
+	@extend .black;
+	&-corp{
+		background-color: setColor(main);
+	}
+	&-inner{
+		border: 1px solid #fff;
+		
+	}
+	@include resp-min(sm){
+		font-size: 24px;
+		&-inner{
+			padding: 50px 15px;
+		}
+	}
+}

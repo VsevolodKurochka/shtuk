@@ -1,8 +1,8 @@
-@include connect-font(ProximaRegular,regular);
-@include connect-font(ProximaLight,light);
+// @include connect-font(ProximaRegular,regular);
+// @include connect-font(ProximaLight,light);
 //@include connect-font(ProximaMedium,medium);
-@include connect-font(ProximaBold,bold);
-@include connect-font(ProximaBlack,black);
+// @include connect-font(ProximaBold,bold);
+// @include connect-font(ProximaBlack,black);
 // .robotoSlab{
 // 	font-family: 'Roboto Slab', serif;
 // }
@@ -21,3 +21,8 @@
 // .bold{
 // 	font-weight: 700;
 // }
+.regular{
+	font-family: Arial;
+	font-weight: 400;
+}
+@include connect-font(RoomBlack,black);

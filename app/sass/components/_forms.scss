@@ -1,5 +1,6 @@
-.vmain-form{
+.vform-main{
 	width: 100%;
+	font-size: 0;
 	@extend .center-block;
 	@include resp-min(sm){
 		&-fixed-width{
@@ -7,21 +8,20 @@
 		}
 	}
 	input{
-		border: none;
-		border-radius: 5px;
-		text-align: left;
-		width: 100%;
+		border: 1px solid #d2d9e4;
+		border-radius: 0;
+		text-align: center;
 		max-width: 100%;
-		padding: 15px;
-		color: #000;
-		font-size: 15px;
+		padding: 18.8px 0;
+		color: #92979a;
+		font-size: 18px;
 		outline: none;
 		@extend .block-inline;
 		@extend .regular;
 		@extend .transition;
-	}
-	[type="submit"]{
-		width: 100%;
+		&:focus{
+			border-color: setColor(main);
+		}
 	}
 	@at-root{
 		.vmodal &{
@@ -42,48 +42,21 @@
 			}
 		}
 	}
-	&-row{
-		position: relative;
-		margin-top: 15px;
-		&:first-child{
-			margin-top: 0;
-		}
-	}
-	&-line{
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		height: 1px;
-		width: 0;
-		//transform: scaleX(0);
-		background-color: $color-modal-main;
-		@extend .transition;
-	}
-	input:focus + &-line{
-		//transform: scaleX(1);
-		width: 100%;
-	}
-	&-input-wrap{
-		&:after{
-			@extend .pseudo;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			height: 1px;
-			background-color: $color-modal-trans;
-		}
-	}
 	@include resp-min(xs){
-		&-btn-wrap{
-			max-width: 70%;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		&-row{
-			margin-top: 30px;
-		}
 		[type="submit"]{
 
 		}
+	}
+	@include resp-min(md){
+		input,
+		button{
+			display: inline-block;
+		}
+		input{
+			margin-right: 15px;
+		}
+	}
+	@include resp-min(lg){
+
 	}
 }

@@ -2,9 +2,63 @@ extends includes/layout
 block title
 	title Main Page
 block content
-	section#sec1
+	header.header
 		.vcontainer
-			p Text1
+			.header-intro
+				h1.vtitle-big Штукатурные <br>работы 
+				.header-do
+					.header-do-inner
+						p.header-do-title Любой
+						p сложности
+					.header-do-inner
+						p.header-do-title Машинным
+						p.ls-10 способом
+				h2.vtitle-small для частных и промышленных помещений <br> <span class="vtitle-small-secret">на профессиональном немецком оборудовании</span>
+			.vrow.header-block-wrap
+				+headerBlock('img/h1.png') Гарантия 15 лет на работу и материалы
+				+headerBlock('img/h2.png') Средние сроки <br>работы - 5-14 дней
+				+headerBlock('img/h3.png') Высококвалифицированные штукатуры
+				+headerBlock('img/h3.png') Честность, вежливость и культура в общении
+			.header-form
+				p.header-form-title <span class="color-main text-du">Оставьте ваши контакты</span> в форме ниже <br class="vhidden-xs"> и <span class="color-main text-du">получите бесплатно</span> квалифицированную консультацию и рассчет стоимости работ
+				form.vform-main.header-form-inner(action="action")
+					input(type="text" class="vform-main-input" placeholder="Ваше имя")
+					input(type="text" class="vform-main-input" placeholder="Ваш телефон")
+					input(type="text" class="vform-main-input" placeholder="Ваш Email")
+					button(type="submit" class="vbtn vbtn-main vform-main-submit") Рассчитать сроки и стоимость работ
+	section#hello.vsection
+		.vcontainer
+			.vrow.big-man-center
+				.vak-xs-12.vak-md-5.big-man-wrap
+					img(src="img/bigman.png")
+				.vak-xs-12.vak-md-7
+					h3.vtitle.big-man-intro.color-main-second Привет, я Анатолий…
+					p.vtitle-small.color-main-second.text-tu.big-man-what Обращаясь в мою компанию, Вы получите <br class="vhidden-xs">идеально выполненную работу по разумной цене:
+					ul.list.list-check-orange.list-check-small.big-man-list
+						li Работаю в сфере отделочных работ уже 20 лет
+						li Мы с командой отштукатурили 90 000 м2 в 300+ частных и промышленных помещениях
+						li Лично обучил более 60 мастеров-штукатуров
+						li Сейчас в моей команде 15 человек, каждый из которых <br class="vhidden-xs">имеет опыт 5 лет и более
+			.big-man-about.color-main-second
+				p.vtitle-small.text-center Мои личные принципы работы, благодаря которым нашу <br class="vhidden-xs">компанию любят 300+ счастливых клиентов:
+				.vrow.rule-wrapper
+					+rule('img/rule1.png') Личная ответственность
+					+rule('img/rule2.png') Аккуратность
+					+rule('img/rule3.png') Скорость
+					+rule('img/rule4.png') Внимательность к деталям
+					+rule('img/rule5.png') Дисциплина
+	section.vsection.what-today-section
+		.vcontainer
+			.what-today-inner
+				h3.vtitle.color-main-second Вот <span class="color-main">что происходит</span> сейчас <br class="vhidden-xs"> на рынке штукатурных работ:
+				ul.list.list-cancel.what-today-list
+					li Штукатурить приезжают вчерашние безработные, которых наняли за копейки. Они срывают сроки и живут на объекте
+					li Закупаются некачественные материалы и оборудование, поэтому штукатурка лежит криво и приходится переделывать
+					li Компании не работают напрямую <br class="vhidden-xs"> с производителями материалов, <br class="vhidden-xs">из-за чего цены завышаются на 30-40%
+					li После работы остается мусор <br class="vhidden-xs">и разруха - приходится всё убирать самому еще несколько дней
+			.fluid-block.fluid-block-corp.what-today-fluid
+				.fluid-block-inner
+					p Всех этих «<span class="color-main-second">специалистов</span>» объединяет одно — они заманивают покупателя громкими обещаниями, завышают цены в процессе работ и кладут штукатурку, которая начинает отслаиваться уже через несколько месяцев
 block dev
 	.vcontainer
 		.vbtn-single.text-center
@@ -28,11 +82,3 @@ block dev
 							span.vmain-form-line
 						.vmain-form-row.vmain-form-btn-wrap
 							button.vbtn.vbtn-effect-bounce-top(type="submit") Получить!
-	.vmodal.vmodal-transparent#modalvideo
-		.vmodal-dialog.big
-			button(type="button" class="vmodal-close" data-close="vmodal") &times;
-			.vmodal-box
-				p.vmodal-title
-				.vmodal-body
-					.vmodal-video
-					// +button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalform") Button_text_big1
