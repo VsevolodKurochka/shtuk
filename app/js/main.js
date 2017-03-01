@@ -17,7 +17,7 @@ $(document).ready(function(){
 		$('.vnav a[href*="#"]').click(function(){
 			var href = $(this).attr('href');
 			$('body,html').animate({
-				scrollTop: $(href).offset().top
+				scrollTop: $(href).offset().top - 70
 			},2000);
 			$("[data-menu]").removeClass(active);
 			$('.vnav-wrap-fixed .vnav').removeClass('vnav-active');
@@ -70,45 +70,11 @@ $(document).ready(function(){
 				body.removeClass("vmodal-open");
 			}
 		});
-		// Video
-		$('[data-video]').click(function(){
-			var thisVideo = $(this).attr('data-video');
-			var thisSource = $(this).attr('data-source');
-			var thisTitle = $(this).attr('data-title');
-			var output;
-			videoBlockClear();
-			if(thisTitle){
-				$("#modalvideo .vmodal-title").text(thisTitle);
-			}
-			if( thisSource == 'youtube'){
-				output = $('<iframe />', {
-					class: 'vmodal-iframe',
-					src: thisVideo + '?autoplay=1'
-				}).appendTo('#modalvideo .vmodal-video');
-			}
+		$(".owl-carousel").owlCarousel({
+			items: 1,
+			loop: true,
+			nav: true,
+			navText: ["", ""],
+			dots: false
 		});
-		$("#modalvideo .vmodal-close").click(function(){
-			videoBlockClear();
-		});
-	// Collapse
-		$(".vcollapse-inner.active").children(".vcollapse-body").slideDown();
-		$(".vcollapse-header").click(function(){
-			$(this).parent().toggleClass(active);
-			$(this).next().slideToggle("slow");
-			$(this).closest(".vcollapse-wrap").children(".vcollapse-inner").not($(this).parent()).removeClass("active");
-			$(this).closest(".vcollapse-wrap").children(".vcollapse-inner").children(".vcollapse-body").not($(this).next()).slideUp("slow");
-		});
-	// Tabs
-		$('[data-func="tab"]').click(function(){			
-			// Tab links toggle class
-				$(this).closest(".vtabs-list").children("li").removeClass(active);
-				$(this).parent().addClass(active);
-			// Show tab content
-				var tabTarget = $(this).attr('data-target');
-				$(tabTarget).addClass(active);
-				$(".vtabs-content > div").not($(tabTarget)).removeClass(active);
-		});
-	// Develope
-		var widthDevice = $(window).width();
-		$(".development").html(widthDevice);
 });	

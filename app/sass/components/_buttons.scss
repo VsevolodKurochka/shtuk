@@ -10,7 +10,7 @@
   @extend .relative;
   @extend .block-inline;
   @extend .text-dn;
-  @extend .bold !optional;
+  @extend .black;
   @extend .transition;
   &:before{
     z-index: -1;
@@ -118,12 +118,18 @@
     }
   }
   &-single{
-    margin-bottom: 15px;
     @include resp-min(sm){
       margin-top: 70px;
     }
     @include resp-max(sm){
       margin-top: 35px;
+    }
+  }
+  &-single &{
+    @include resp-min(sm){
+      padding-left: 35px;
+      padding-right: 35px;
+      text-transform: uppercase;
     }
   }
 }

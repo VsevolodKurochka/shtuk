@@ -14,7 +14,7 @@ mixin button(buttonClass, modalTarget)
 
 	button(class=buttonClass data-func="vmodal" data-target=modalTarget)&attributes(attributes): block
 mixin headerBlock(img)
-	.vak-xs-12.vak-sm-6.vak-md-3
+	.vak-xs-12.vak-sm-6.vak-md-3.header-block
 		.header-block-inner
 			.header-block-image
 				img(src=img)
@@ -23,3 +23,19 @@ mixin rule(src)
 	.vak-xs-12.vak-sm-6.vak-lg-2.rule
 		img(src=src)
 		p: block 
+mixin review(src, name)
+	.vak-xs-12.vak-sm-6.vak-lg-5.review-wrap
+		.review
+			.review-body: block 
+			.review-inf
+				.review-image: img(src=src)
+				p.review-name= name
+mixin step(src, number)
+	.vak-xs-12.vak-sm-6.vak-md-3.step-wrap
+		.step
+			.step-header
+				.step-image: img(src=src)
+				p.step-title= number
+			.step-line
+			.step-body
+				p: block 

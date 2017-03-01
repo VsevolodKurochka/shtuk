@@ -23,6 +23,7 @@
 			border-color: setColor(main);
 		}
 	}
+	
 	@at-root{
 		.vmodal &{
 			color: $color-modal-trans;
@@ -42,21 +43,9 @@
 			}
 		}
 	}
-	@include resp-min(xs){
-		[type="submit"]{
-
-		}
-	}
-	@include resp-min(md){
-		input,
+	@include resp-min(lg){
 		button{
 			display: inline-block;
 		}
-		input{
-			margin-right: 15px;
-		}
-	}
-	@include resp-min(lg){
-
 	}
 }

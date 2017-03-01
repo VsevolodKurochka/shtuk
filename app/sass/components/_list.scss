@@ -5,6 +5,7 @@
       @extend .pseudo;
       top: 0;
     }
+    margin-bottom: 15px;
   }
   @at-root{
     %list-check{
@@ -45,22 +46,14 @@
       }
     }
   }
-  @include resp-max(sm){
-    &-cancel{
-      li{
-        padding-top: 40px;
-        &:after{
-          margin-left: -18.5px;
-        }
-      }
-    }
-  }
   @include resp-min(sm){
     &-check{
       &-big{
         li{
-          padding-left: 40px;
+          padding-left: 70px;
           &:after{
+            top: -10px;
+            left: 15px;
             width: 46px;
             height: 37px;
           }

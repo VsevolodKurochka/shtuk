@@ -1,6 +1,6 @@
 extends includes/layout
 block title
-	title Main Page
+	title ШТУКАТУРНЫЕ РАБОТЫ
 block content
 	header.header
 		.vcontainer
@@ -12,13 +12,13 @@ block content
 						p сложности
 					.header-do-inner
 						p.header-do-title Машинным
-						p.ls-10 способом
+						p.header-do-big-ls способом
 				h2.vtitle-small для частных и промышленных помещений <br> <span class="vtitle-small-secret">на профессиональном немецком оборудовании</span>
 			.vrow.header-block-wrap
-				+headerBlock('img/h1.png') Гарантия 15 лет на работу и материалы
+				+headerBlock('img/h1.png') Гарантия 15 лет на<br> работу и материалы
 				+headerBlock('img/h2.png') Средние сроки <br>работы - 5-14 дней
-				+headerBlock('img/h3.png') Высококвалифицированные штукатуры
-				+headerBlock('img/h3.png') Честность, вежливость и культура в общении
+				+headerBlock('img/h3.png') Высококвалифицированные <br>штукатуры
+				+headerBlock('img/h3.png') Честность, вежливость <br>и культура в общении
 			.header-form
 				p.header-form-title <span class="color-main text-du">Оставьте ваши контакты</span> в форме ниже <br class="vhidden-xs"> и <span class="color-main text-du">получите бесплатно</span> квалифицированную консультацию и рассчет стоимости работ
 				form.vform-main.header-form-inner(action="action")
@@ -30,7 +30,7 @@ block content
 		.vcontainer
 			.vrow.big-man-center
 				.vak-xs-12.vak-md-5.big-man-wrap
-					img(src="img/bigman.png")
+					img.big-man(src="img/bigman.png")
 				.vak-xs-12.vak-md-7
 					h3.vtitle.big-man-intro.color-main-second Привет, я Анатолий…
 					p.vtitle-small.color-main-second.text-tu.big-man-what Обращаясь в мою компанию, Вы получите <br class="vhidden-xs">идеально выполненную работу по разумной цене:
@@ -40,7 +40,7 @@ block content
 						li Лично обучил более 60 мастеров-штукатуров
 						li Сейчас в моей команде 15 человек, каждый из которых <br class="vhidden-xs">имеет опыт 5 лет и более
 			.big-man-about.color-main-second
-				p.vtitle-small.text-center Мои личные принципы работы, благодаря которым нашу <br class="vhidden-xs">компанию любят 300+ счастливых клиентов:
+				p.vtitle-small.text-center Мои личные принципы работы, благодаря которым нашу <br class="vhidden-xs vhidden-sm">компанию любят 300+ счастливых клиентов:
 				.vrow.rule-wrapper
 					+rule('img/rule1.png') Личная ответственность
 					+rule('img/rule2.png') Аккуратность
@@ -59,18 +59,126 @@ block content
 			.fluid-block.fluid-block-corp.what-today-fluid
 				.fluid-block-inner
 					p Всех этих «<span class="color-main-second">специалистов</span>» объединяет одно — они заманивают покупателя громкими обещаниями, завышают цены в процессе работ и кладут штукатурку, которая начинает отслаиваться уже через несколько месяцев
+	section.vsection.variant-section
+		.vcontainer
+			.variant-inner
+				h3.vtitle В этой ситуации <br class="vhidden-xs">у Вас есть 2 варианта:
+				.vrow.variant-wrap
+					.vak-xs-12.vak-md-6.variant-block-wrap
+						.variant-block.variant-block-1
+							p.variant-number 1
+							p.variant-text Найти первую попавшуюся бригаду, сэкономить в моменте и через несколько месяцев штукатурить заново, потому что стены потрескались и потеряли вид
+					.vak-xs-12.vak-md-6.variant-block-wrap
+						.variant-block.variant-block-2
+							p.variant-number 2
+							p.variant-text Обратиться к команде, которая уже 20 лет на рынке, работает только с качественными материалами и выполнила более 300 работ для частных и корпоративных клиентов
+				p.variant-title Оставьте Ваши контакты в форме ниже, чтобы бесплатно проконсультироваться <br class="vhidden-xs">со специалистом и рассчитать стоимость работ конкретно для Вашего помещения!
+	section.vsection.why-section
+		.vcontainer
+			.why-inner
+				h3.vtitle.color-main-second.why-title-big Почему более <span class="color-main">300</span> частных клиентов <br class="vvisible-md vvisible-lg">и <span class="color-main">20</span> крупных застройщиков выбирают нас:
+				.vrow.why-row
+					.vak-xs-12.vak-sm-6.vak-lg-5.why-wrap
+						.why
+							.why-header
+								.why-image: img(src="img/why1.png")
+								p.why-title Контроль
+							.why-body
+								p Я сам лично проверяю каждого, <br class="vhidden-xs">кто приходит ко мне в команду <br class="vhidden-xs">и гарантирую его компетенцию
+					.vak-xs-12.vak-sm-6.vak-lg-5.why-wrap
+						.why
+							.why-header
+								.why-image: img(src="img/why2.png")
+								p.why-title Работаем честно и открыто
+							.why-body
+								p Весь порядок работ мы фиксируем в документации и составляем сметы без «скрытых» доплат и мошенничества. Вы точно уверены, что оговоренная изначально цена не вырастет
+					.vak-xs-12.vak-sm-6.vak-lg-5.why-wrap
+						.why
+							.why-header
+								.why-image: img(src="img/why3.png")
+								p.why-title Помещения любого типа и квадратуры
+							.why-body
+								p У нас есть опыт работы с одно-, двух- и 3-комнатными квартирами, частными домами, дачами, таун-хаусами, коттеджами и производственными помещениями
+					.vak-xs-12.vak-sm-6.vak-lg-5.why-wrap
+						.why
+							.why-header
+								.why-image: img(src="img/why4.png")
+								p.why-title Гарантия 15 лет
+							.why-body
+								p Даем 15-летнюю гарантию на работу и материалы. Если вдруг что-то пойдет не так (хотя такого еще не случалось) - приедем и бесплатно всё исправим
+					.vak-xs-12.vak-sm-6.vak-lg-5.why-wrap
+						.why
+							.why-header
+								.why-image: img(src="img/why5.png")
+								p.why-title Сотрудничаем с производителями
+							.why-body
+								p Все материалы и оборудование - высочайшего немецкого качества. А за счет того, что мы сотрудничаем с производителями без посредников - наши цены ниже на 25-30%
+					.vak-xs-12.vak-sm-6.vak-lg-5.why-wrap
+						.why
+							.why-header
+								.why-image: img(src="img/why6.png")
+								p.why-title Делаем быстро и надолго
+							.why-body
+								p За 1 день мы штукатурим от 60 м2. Это значит, что средняя 1-комнатная квартира будет готова за 5 дней, 2-комнатная за 8, а дом - от 10 до 30 дней
+				.vbtn-single.text-center
+					+button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalform") Заказать штукатурку своего помещения у профессионалов
+	section.vsection.we-machine-section.color-white#machine
+		.vcontainer
+			.we-machine-intro.vsection-intro
+				h3.vtitle.we-machine-title Мы делаем <span class="color-main">машинную</span> штукатурку …
+				p.vtitle-small И вот почему, это выгоднее старого метода:
+			ul.list.list-check-orange.list-check-big.we-machine-list
+				li Это экономит время, потому <br class="vhidden-xs">что стены сразу готовы<br class="vhidden-xs"> к поклейке обоев
+				li Это экономит деньги, потому что расход материалов в 1,5-2 раза меньше, чем при ручной штукатурке
+				li Это ускоряет процесс ремонта, потому что машинная штукатурка высыхает в 2-3 раза быстрее ручной (от 7-ми дней)
+				li Это долговечно, поскольку стены после машинной штукатурки идеально ровные и после<br class="vhidden-xs"> высыхания не появляются<br class="vhidden-xs"> трещины
+				li Это надежно, так как машинная штукатурка обеспечивает отличную звуко- и теплоизоляцию
+				li Это безопасно, потому как в состав штукатурки входят гипс и перлит - природные и невредные материалы
+	section.vsection.review-section#works
+		.vcontainer
+			.review-container-inner
+				.vsection-intro
+					h3.vtitle.color-main-second Это лишь несколько помещений, <br class="vvisible-lg">которые мы <span class="color-main">уже отштукатурили</span>:
+				#slider-plaster.owl-carousel.owl-theme.slider.review-slider
+					div: img(src="img/slider.jpg")
+					div: img(src="img/slider.jpg")
+					div: img(src="img/slider.jpg")
+				.vsection-intro#reviews
+					p.vtitle.color-main-second А вот что говорят <span class="color-main">клиенты</span> <br class="vvisible-md vvisible-lg">после сотрудничества с нами:
+					.cf
+						.vrow.review-row
+							+review('img/review1.png', 'Евгений Литвиненко') «Анатолий специалист своего дела! Спасибо ему! Приехал, замерял, всё объяснил, рассказал и показал!!! Спасибо ему огромное за качественно сделанную работу!!!»
+							+review('img/review2.png', 'Аня Балюра') «Спасибо ребята за ровные стены! Отдельно благодарю Анатолия, профи в своем деле, без лишних слов всё рассказал а главное сделал как обещал!»
+						.vrow.review-row
+							+review('img/review3.png', 'Павел Ларкин') «Приятно когда ребята знают что делают! И никто не курил и не пил на объекте.. Мою 3х квартиру сделали за 2 недели! Спасибо!!!»
+							+review('img/review4.png', 'Василий Кирлан') «У меня однокомнатная квартира и никто не хотел браться за штукатурку! Спасибо Анатолию за то, что взялись за работу и сделали всё за пару дней за вменяемые деньги.»
+	section.vsection.color-white.step-section
+		.vcontainer
+			h3.vtitle Всего <span class="color-main">4 простых шага</span> - и Ваша квартира, дом или помещение готово!
+			.vrow
+				+step('img/step1.png', 'Шаг #1') Оставляете заявку – <br class="vvisible-md vvisible-lg">Мы перезваниваем, согласовываем дату и время замера – Замеряем объект и составляем смету
+				+step('img/step2.png', 'Шаг #2') Прописываем сроки и стоимость – Оставляете предоплату – Заезжает бригада, привозит материалы и оборудование
+				+step('img/step3.png', 'Шаг #3') Грунтуем поверхность, устанавливаем уголки<br class="vvisible-md vvisible-lg"> и маяки – Штукатурим, после<br class="vvisible-md vvisible-lg"> выравниваем и полируем стены
+				+step('img/step4.png', 'Шаг #4') Убираем помещение, моем<br class="vvisible-md vvisible-lg"> окна и двери – Вы<br class="vvisible-md vvisible-lg"> доплачиваете остаток и<br class="vvisible-md vvisible-lg"> наслаждаетесь аккуратными ровными стенами!
+	section.vsection.text-center.question-section
+		.vcontainer
+			.question
+				p.question-title.black Остались вопросы?
+				p.question-title-small.black Заполните форму и мы на них ответим
+				form.vform-main.question-form(action="action")
+					input(type="text" class="vform-main-input" placeholder="Ваше имя")
+					input(type="text" class="vform-main-input" placeholder="Ваш телефон")
+					input(type="text" class="vform-main-input" placeholder="Ваш Email")
+					button(type="submit" class="vbtn vbtn-main vform-main-submit") Рассчитать сроки и стоимость работ
+			.question-logo: img(src="img/logo.png")
 block dev
-	.vcontainer
-		.vbtn-single.text-center
-			+button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalform") Button_text_big1
-		+button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalvideo")(data-video="https://www.youtube.com/embed/Iutk7AboLZI" data-source="youtube" data-title="Уроки JavaScript Практика #3 Пишем свой CSS генератор") Button_text_big
 	.vmodal#modalform
 		.vmodal-dialog.vmodal-dialog-default.vmodal-dialog-center
 			button(type="button" class="vmodal-close" data-close="vmodal") &times;
 			.vmodal-box
 				p.vmodal-title Отправить заявку
 				.vmodal-body
-					form(action="" class="vmain-form")
+					form(action="" class="vform-main")
 						.vmain-form-row.vmain-form-input-wrap
 							input(type="text" placeholder="Имя")
 							span.vmain-form-line

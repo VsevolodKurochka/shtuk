@@ -1,7 +1,7 @@
 .vtitle{
 	margin-bottom: 50px;
-	line-height: 1;
-	font-size: 40px;
+	line-height: 1.1;
+	font-size: 24px;
 	@include fs('vtitle');
 	@extend .text-tu;
 	@extend .black !optional;
@@ -10,17 +10,16 @@
 		font-size: 17px;
 		text-transform: uppercase;
 		@include fs('vtitle-small');
-		@extend .black !optional;	
+		@extend .black !optional;
 		&-secret{
-			display: inline-block;
-			padding: 5px 30px;
-			@include bg('../img/secret.png', center center, no-repeat, contain);
-			@extend .color-main;
+			display: inline;
+			background-color: #fff;
+			color: setColor(main);
 		}
 	}
 	&-big{
 		line-height: 1;
-		font-size: 48px;
+		font-size: 35px;
 		text-transform: uppercase;
 		margin: 0 0 15px 0;
 		@include fs('vtitle-big');
@@ -34,6 +33,13 @@
 	@include resp-min(md){
 		&-big{
 			letter-spacing: 4px;
+		}
+		&-small{
+			&-secret{
+				padding: 7px 30px;
+				
+				@include bg('../img/secret.png', 0 0 , no-repeat, cover);
+			}
 		}
 	}
 }
