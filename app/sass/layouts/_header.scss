@@ -19,7 +19,7 @@
 			display: inline-block;
 			vertical-align: middle;
 			&:first-child{
-				margin-right: 7.5px;
+				margin-right: 3.5px;
 			}
 		}
 	}
@@ -37,39 +37,53 @@
 		box-shadow: 0 0 9px rgba(13,13,17,.14);
 		&-title{
 			margin-bottom: 20px;
-			font-size: 17px;
+			font-size: 15px;
 			text-transform: uppercase;
 			text-decoration: underline;
 			color: #355c98;
 		}
 		@include resp-max(sm){
-			input,
-			button{
+			.vform-main-inner input,
+			.vform-main-button button{
 				display: block;
 				width: 100%;
 			}
-			input{
+			.vform-main-inner{
 				margin-bottom: 15px;
 			}
 		}
 		@include resp-min(sm){
 			@include resp-max(lg){
-				display: flex;
-				flex-wrap: wrap;
-				input{
-					flex-basis: 33.3333%;
-					&:nth-child(1),
-					&:nth-child(2){
-						border-right: none;
+				&-inner{
+					display: flex;
+					flex-wrap: wrap;		
+					.vform-main-inner{
+						flex-basis: 33.3333%;
+						padding-right: 15px;
+						&:nth-child(1),
+						&:nth-child(2){
+							border-right: none;
+						}
+						&:nth-child(3){
+							padding-right: 0;
+						}
 					}
-				}
-				button{
-					margin-top: 15px;
+					.vform-main-button{
+						flex-basis: 100%;
+						margin-top: 15px;
+					}
 				}
 			}
 		}
 		@include resp-min(md){
-			input{
+			
+		}
+		@include resp-min(lg){
+			.vform-main-button,
+			.vform-main-inner{
+				display: inline-block;
+			}
+			.vform-main-inner{
 				margin-right: 15px;
 			}
 		}

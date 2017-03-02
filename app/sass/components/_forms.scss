@@ -23,22 +23,34 @@
 			border-color: setColor(main);
 		}
 	}
-	
+	&-inner{
+		position: relative;
+	}
+	&-inner input,
+	&-button button{
+		display: block;
+		width: 100%;
+	}
+	&-necessary{
+		display: block;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		font-size: 10px;
+		color: #ff8433;
+	}
 	@at-root{
 		.vmodal &{
-			color: $color-modal-trans;
+			color: setColor(main);
+			&-inner{
+				margin-bottom: 15px;
+			}
 			[type="submit"]{
-				border: 3px solid $color-modal-trans;
-				border-radius: 0;
-				background-color: transparent;
-				font-size: 20px;
-				color: inherit;
-				text-transform: uppercase;
-				outline: none;
-				&:hover,
-				&:focus{
-					border-color: $color-modal-main;
-					color: $color-modal-main;
+
+			}
+			@include resp-max(sm){
+				input,button{
+					font-size: 15px;
 				}
 			}
 		}

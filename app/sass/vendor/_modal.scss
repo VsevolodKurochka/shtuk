@@ -45,7 +45,7 @@
 	// 	opacity: 1;
 	// }
 	&-box{
-		padding: 40px 30px;
+		padding: 40px 10px;
 		border-radius: 10px;
 		background-color: setColor(white);
 	}
@@ -107,21 +107,24 @@
 	}
 	&-title{
 		position: relative;
-		margin-bottom: 30px;
-		text-align: left;
-		font-size: 25px;
+		margin-bottom: 15px;
+		text-align: center;
+		font-size: 22px;
 		text-transform: uppercase;
 		letter-spacing: 1.5px;
 		line-height: 1.1;
-		color: $color-modal-main;
-		@extend .bold !optional;
-		&:after{
-			@include pseudo();
-			top: 0;
-			left: -30px;
-			width: 5px;
-			height: 100%;
-			background-color: $color-modal-main;
+		color: setColor(main);
+		@extend .black !optional;
+		@include resp-min(sm){
+			text-align: left;
+			&:after{
+				@include pseudo();
+				top: 0;
+				left: -30px;
+				width: 5px;
+				height: 100%;
+				background-color: setColor(main);
+			}
 		}
 	}
 	&-transparent{

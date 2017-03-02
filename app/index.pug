@@ -5,6 +5,9 @@ block content
 	header.header
 		.vcontainer
 			.header-intro
+				.vhidden-md.vhidden-lg.phones-tablets
+					a(href="tel: 095 815 63 69") 095 815 63 69
+					a(href="tel: 098 891 95 52") 098 891 95 52
 				h1.vtitle-big Штукатурные <br>работы 
 				.header-do
 					.header-do-inner
@@ -22,10 +25,15 @@ block content
 			.header-form
 				p.header-form-title <span class="color-main text-du">Оставьте ваши контакты</span> в форме ниже <br class="vhidden-xs"> и <span class="color-main text-du">получите бесплатно</span> квалифицированную консультацию и рассчет стоимости работ
 				form.vform-main.header-form-inner(action="action")
-					input(type="text" class="vform-main-input" placeholder="Ваше имя")
-					input(type="text" class="vform-main-input" placeholder="Ваш телефон")
-					input(type="text" class="vform-main-input" placeholder="Ваш Email")
-					button(type="submit" class="vbtn vbtn-main vform-main-submit") Рассчитать сроки и стоимость работ
+					.vform-main-inner
+						input(type="text" class="vform-main-input" placeholder="Ваше имя")
+					.vform-main-inner
+						input(type="text" class="vform-main-input" placeholder="Ваш телефон")
+					.vform-main-inner
+						span.vform-main-necessary Не обязательно *
+						input(type="text" class="vform-main-input" placeholder="Ваш Email")
+					.vform-main-button
+						button(type="submit" class="vbtn vbtn-main vform-main-submit") Рассчитать сроки и стоимость работ
 	section#hello.vsection
 		.vcontainer
 			.vrow.big-man-center
@@ -73,6 +81,17 @@ block content
 							p.variant-number 2
 							p.variant-text Обратиться к команде, которая уже 20 лет на рынке, работает только с качественными материалами и выполнила более 300 работ для частных и корпоративных клиентов
 				p.variant-title Оставьте Ваши контакты в форме ниже, чтобы бесплатно проконсультироваться <br class="vhidden-xs">со специалистом и рассчитать стоимость работ конкретно для Вашего помещения!
+			.header-form.variant-form
+				form.vform-main.header-form-inner(action="action")
+					.vform-main-inner
+						input(type="text" class="vform-main-input" placeholder="Ваше имя")
+					.vform-main-inner
+						input(type="text" class="vform-main-input" placeholder="Ваш телефон")
+					.vform-main-inner
+						span.vform-main-necessary Не обязательно *
+						input(type="text" class="vform-main-input" placeholder="Ваш Email")
+					.vform-main-button
+						button(type="submit" class="vbtn vbtn-main vform-main-submit") Рассчитать сроки и стоимость работ
 	section.vsection.why-section
 		.vcontainer
 			.why-inner
@@ -130,7 +149,7 @@ block content
 			ul.list.list-check-orange.list-check-big.we-machine-list
 				li Это экономит время, потому <br class="vhidden-xs">что стены сразу готовы<br class="vhidden-xs"> к поклейке обоев
 				li Это экономит деньги, потому что расход материалов в 1,5-2 раза меньше, чем при ручной штукатурке
-				li Это ускоряет процесс ремонта, потому что машинная штукатурка высыхает в 2-3 раза быстрее ручной (от 7-ми дней)
+				li Это ускоряет процесс ремонта, потому что машинная штукатурка высыхает в 2-3 раза быстрее ручной
 				li Это долговечно, поскольку стены после машинной штукатурки идеально ровные и после<br class="vhidden-xs"> высыхания не появляются<br class="vhidden-xs"> трещины
 				li Это надежно, так как машинная штукатурка обеспечивает отличную звуко- и теплоизоляцию
 				li Это безопасно, потому как в состав штукатурки входят гипс и перлит - природные и невредные материалы
@@ -147,7 +166,7 @@ block content
 					p.vtitle.color-main-second А вот что говорят <span class="color-main">клиенты</span> <br class="vvisible-md vvisible-lg">после сотрудничества с нами:
 					.cf
 						.vrow.review-row
-							+review('img/review1.png', 'Евгений Литвиненко') «Анатолий специалист своего дела! Спасибо ему! Приехал, замерял, всё объяснил, рассказал и показал!!! Спасибо ему огромное за качественно сделанную работу!!!»
+							+review('img/review1.png', 'Евгений Литвиненко') «Анатолий специалист своего дела! Спасибо ему! Приехал, замерял, всё объяснил, рассказал и показал! Спасибо ему огромное за качественно сделанную работу!»
 							+review('img/review2.png', 'Аня Балюра') «Спасибо ребята за ровные стены! Отдельно благодарю Анатолия, профи в своем деле, без лишних слов всё рассказал а главное сделал как обещал!»
 						.vrow.review-row
 							+review('img/review3.png', 'Павел Ларкин') «Приятно когда ребята знают что делают! И никто не курил и не пил на объекте.. Мою 3х квартиру сделали за 2 недели! Спасибо!!!»
@@ -166,10 +185,15 @@ block content
 				p.question-title.black Остались вопросы?
 				p.question-title-small.black Заполните форму и мы на них ответим
 				form.vform-main.question-form(action="action")
-					input(type="text" class="vform-main-input" placeholder="Ваше имя")
-					input(type="text" class="vform-main-input" placeholder="Ваш телефон")
-					input(type="text" class="vform-main-input" placeholder="Ваш Email")
-					button(type="submit" class="vbtn vbtn-main vform-main-submit") Рассчитать сроки и стоимость работ
+					.vform-main-inner
+						input(type="text" class="vform-main-input" placeholder="Ваше имя")
+					.vform-main-inner
+						input(type="text" class="vform-main-input" placeholder="Ваш телефон")
+					.vform-main-inner
+						span.vform-main-necessary Не обязательно *
+						input(type="text" class="vform-main-input" placeholder="Ваш Email")
+					.vform-main-button
+						button(type="submit" class="vbtn vbtn-main vform-main-submit") Рассчитать сроки и стоимость работ
 			.question-logo: img(src="img/logo.png")
 block dev
 	.vmodal#modalform
@@ -178,15 +202,13 @@ block dev
 			.vmodal-box
 				p.vmodal-title Отправить заявку
 				.vmodal-body
-					form(action="" class="vform-main")
-						.vmain-form-row.vmain-form-input-wrap
-							input(type="text" placeholder="Имя")
-							span.vmain-form-line
-						.vmain-form-row.vmain-form-input-wrap
-							input(type="email" placeholder="E-mail")
-							span.vmain-form-line
-						.vmain-form-row.vmain-form-input-wrap
-							input(type="text" placeholder="Телефон")
-							span.vmain-form-line
-						.vmain-form-row.vmain-form-btn-wrap
-							button.vbtn.vbtn-effect-bounce-top(type="submit") Получить!
+					form.vform-main(action="action")
+						.vform-main-inner
+							input(type="text" class="vform-main-input" placeholder="Ваше имя")
+						.vform-main-inner
+							input(type="text" class="vform-main-input" placeholder="Ваш телефон")
+						.vform-main-inner
+							span.vform-main-necessary Не обязательно *
+							input(type="text" class="vform-main-input" placeholder="Ваш Email")
+						.vform-main-button
+							button(type="submit" class="vbtn vbtn-main vform-main-submit") Рассчитать сроки и стоимость работ
